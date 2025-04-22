@@ -8,7 +8,11 @@ require('dotenv').config()
 
 // middleware
 app.use(express.json());
-app.use(cors())
+app.use(cors(
+  credentials = true,
+  origin = "https://frontend-smoky-rho-85.vercel.app/",
+  methods = ["GET", "POST", "PUT", "DELETE"],
+))
 app.use(express.urlencoded({ extended: true }))
 
 // routes
