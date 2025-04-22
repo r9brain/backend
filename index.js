@@ -10,7 +10,7 @@ require('dotenv').config()
 app.use(express.json());
 app.use(cors(
   credentials = true,
-  origin = "https://frontend-smoky-rho-85.vercel.app/",
+  origin = "https://frontend-smoky-rho-85.vercel.app",
   methods = ["GET", "POST", "PUT", "DELETE"],
 ))
 app.use(express.urlencoded({ extended: true }))
