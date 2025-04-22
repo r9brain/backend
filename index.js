@@ -7,12 +7,11 @@ const port = process.env.PORT || 5000;
 require('dotenv').config()
 
 // middleware
-app.use(express.json());
-app.use(cors(
-  credentials = true,
-  origin = "https://frontend-smoky-rho-85.vercel.app",
-  methods = ["GET", "POST", "PUT", "DELETE"],
-))
+app.use(cors({
+  origin: "https://frontend-smoky-rho-85.vercel.app",
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+}));
 app.use(express.urlencoded({ extended: true }))
 
 // routes
