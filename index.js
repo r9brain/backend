@@ -6,6 +6,8 @@ const mongoose = require("mongoose");
 const port = process.env.PORT || 5000;
 require('dotenv').config()
 
+
+app.use(express.json());
 // middleware
 app.use(cors({
   origin: "https://frontend-smoky-rho-85.vercel.app",
